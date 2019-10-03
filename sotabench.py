@@ -97,16 +97,16 @@ ImageNet.benchmark(
     paper_arxiv_id='1905.11946',
     paper_pwc_id='efficientnet-rethinking-model-scaling-for',
     input_transform=b4_input_transform,
-    batch_size=256,
+    batch_size=128,
     num_gpu=1
 )
 
-"""
+
 # Efficient Net B5
 
 # Define Transforms    
 b5_input_transform = transforms.Compose([
-    transforms.Resize(332, PIL.Image.BICUBIC),
+    transforms.Resize(512, PIL.Image.BICUBIC),
     transforms.CenterCrop(456),
     transforms.ToTensor(),
     normalize,
@@ -119,10 +119,12 @@ ImageNet.benchmark(
     paper_arxiv_id='1905.11946',
     paper_pwc_id='efficientnet-rethinking-model-scaling-for',
     input_transform=b5_input_transform,
-    batch_size=256,
+    batch_size=128,
     num_gpu=1
 )
 
+
+"""
 # Efficient Net B6
 
 # Define Transforms    
